@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dlbvkjbhran1"]
+
+[ext_resource type="Script" uid="uid://ble8c1j1lpkug" path="res://SCRIPTS/ARMAS/balas/_357.gd" id="1_wgkkp"]
+[ext_resource type="AudioStream" uid="uid://buwqxphd3plp3" path="res://Audios/armas/audiopisto.mp3" id="2_cabiu"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n2y4v"]
+albedo_color = Color(1, 1, 0, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_a5t2p"]
+material = SubResource("StandardMaterial3D_n2y4v")
+
+[node name="_357" type="MeshInstance3D" unique_id=1349881334]
+transform = Transform3D(-0.0016622423, 0.033023797, 0, -0.10108758, -0.00054302963, 0, 0, 0, 0.19050819, 0, 0, 0)
+mesh = SubResource("CapsuleMesh_a5t2p")
+script = ExtResource("1_wgkkp")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=1905389831]
+transform = Transform3D(9.999786, -0.030455846, 0.057662036, -0.03045585, 5.6375985, 8.259329, -0.057662033, -8.25933, 5.6373863, 0, 0, 0)
+stream = ExtResource("2_cabiu")
+unit_size = 1.0
+max_distance = 200.0

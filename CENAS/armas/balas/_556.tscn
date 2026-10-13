@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://c3uvw81aexbvl"]
+
+[ext_resource type="Script" uid="uid://dgqc7gypasu0u" path="res://SCRIPTS/ARMAS/balas/_556.gd" id="1_wk6py"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_8t2xg"]
+height = 1.4746094
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kj352"]
+height = 2.0927734
+
+[node name="_556" type="CharacterBody3D" unique_id=99510696]
+script = ExtResource("1_wk6py")
+
+[node name="projetil" type="MeshInstance3D" parent="." unique_id=2025404190]
+transform = Transform3D(-0.00030413768, 0.20199941, 0, -0.12599963, -0.0004875858, 0, 0, 0, 0.151, -0.0062091947, 0.0006340916, 0)
+mesh = SubResource("CapsuleMesh_8t2xg")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=511653547]
+transform = Transform3D(0.006224217, 0.11983847, 0, -0.11983847, 0.006224217, 0, 0, 0, 0.12, -0.021450164, 0.000288721, 0)
+shape = SubResource("CapsuleShape3D_kj352")

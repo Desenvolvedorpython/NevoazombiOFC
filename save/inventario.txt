@@ -1,0 +1,15 @@
+#mano, pronto, ja esta tudo feito, quando eu voltar eu so preciso programar
+#o sistema dele criar o botao da arma equipada, q e bem dficil, mostrar o id
+#e o nome, apos isso, criar o script de desequipar, pq n da pra dropar
+#quando alguma arma esta equipada, tem q desequipar toda as armas primeiro
+#
+#ai depois termino o sistema de editar armas, a posicao delas no inventario
+#
+#
+#
+#
+
+#ids das armas e itens
+#revolver 357 = 357
+#skar = 174
+#shortgun inicial = 12

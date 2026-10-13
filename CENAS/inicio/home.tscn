@@ -1,0 +1,145 @@
+[gd_scene format=3 uid="uid://cndihkddcuebl"]
+
+[ext_resource type="Script" uid="uid://ggxqjuhhi8eu" path="res://SCRIPTS/inicio/menu.gd" id="1_21h2t"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6qx4q"]
+albedo_color = Color(0, 0.34901962, 0.007843138, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_gyc6d"]
+material = SubResource("StandardMaterial3D_6qx4q")
+
+[node name="Home" type="Node3D" unique_id=1123418977]
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1490214415]
+transform = Transform3D(1, 0, 0, 0, 0.9952095, 0.09776531, 0, -0.097765274, 0.9952095, 0, 3.412796, 18.268887)
+
+[node name="chao" type="MeshInstance3D" parent="." unique_id=14084696]
+transform = Transform3D(26.13638, 0, 0, 0, 1, 0, 0, 0, 55.22009, 0, 0, 0)
+mesh = SubResource("BoxMesh_gyc6d")
+
+[node name="hud" type="Control" parent="." unique_id=2104413370]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_21h2t")
+
+[node name="botoes" type="Control" parent="hud" unique_id=1995753431]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -216.0
+offset_top = -236.0
+offset_right = 225.0
+offset_bottom = 284.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="jogar" type="Button" parent="hud/botoes" unique_id=1855981331]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -217.5
+offset_right = 240.5
+offset_bottom = 88.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 36
+text = "JOGAR"
+
+[node name="CONFIG" type="Button" parent="hud/botoes" unique_id=1636286983]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -194.5
+offset_top = -164.0
+offset_right = 205.5
+offset_bottom = -76.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 36
+text = "CONFIGURACOES
+"
+
+[node name="HISTORICO" type="Button" parent="hud/botoes" unique_id=1385412878]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.55700004
+anchor_bottom = 0.5
+offset_left = -160.5
+offset_top = -62.0
+offset_right = 137.36298
+offset_bottom = 26.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 36
+text = "HISTORICO"
+
+[node name="COMUSLIDER" type="Control" parent="hud/botoes" unique_id=637612141]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -360.0
+offset_top = -88.0
+offset_right = -360.0
+offset_bottom = -88.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="WHATS" type="Button" parent="hud/botoes/COMUSLIDER" unique_id=533584655]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 18.0
+offset_top = -117.0
+offset_right = 131.0
+offset_bottom = -21.0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 26
+text = "WHATS"
+
+[node name="DISCORD" type="Button" parent="hud/botoes/COMUSLIDER" unique_id=1196226813]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 19.0
+offset_top = -245.0
+offset_right = 132.0
+offset_bottom = -149.0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 25
+text = "DISCORD"
+
+[node name="COIMU" type="Button" parent="hud/botoes" unique_id=108798241]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -122.5
+offset_top = 36.0
+offset_right = 132.5
+offset_bottom = 124.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 36
+text = "COMUNIDADE"
+
+[connection signal="pressed" from="hud/botoes/jogar" to="hud" method="_on_jogar_pressed"]
